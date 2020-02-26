@@ -1,0 +1,153 @@
+<template>
+  <div class="secondPage">
+    <div class="container">
+      <div class="table">
+        <p class="title">君风新零售</p>
+        <img
+          clsss="minImg"
+          v-if="$store.state.user.tempData.screenWidth<800"
+          :src="'./static/icon/'+127+'.png'"
+          alt=""
+        >
+
+        <div class="img">
+          <div
+            v-for="(item,index) in params.list"
+            :key="index"
+          >
+            <img
+              class="imgs"
+              :src="'./static/icon/'+(121+index)+'.png'"
+            >
+            <div class="remark">
+              <p
+                v-for="(items,indexs) in item"
+                :key="indexs"
+              >{{items}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Swiper from "swiper";
+export default {
+  data() {
+    return {
+      params: {
+        list: [
+          [
+            "掌握零售户，控制终端渠道",
+            "掌握大数据，利用大数据创造价值",
+            "把握消费者，树立烟草公司的品牌形象"
+          ],
+          [
+            "提升零售户的获客能力",
+            "提升零售户的获利能力",
+            "提升零售户的服务能力"
+          ],
+          [
+            "提升消费者消费体验",
+            "满足消费者个性化需求",
+            "满足消费者社会交往的需求"
+          ]
+        ]
+      }
+    };
+  },
+  mounted() {},
+  created() {}
+};
+</script>
+
+<style lang="less" scoped>
+.secondPage {
+  padding: 58px 0 0;
+  height: 100vh;
+  background: url(../../../../static/icon/116.png) no-repeat;
+  background-size: 100% 100%;
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+
+    .table {
+      width: 100%;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -600px;
+      margin-top: -300px;
+      .title {
+        font-size: 45px;
+        font-weight: 500;
+        margin-bottom: 100px;
+        color: #444444;
+      }
+     
+      .img {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        & > div {
+          flex: 1;
+          .imgs {
+            width: 180px;
+            height: 211px;
+          }
+          .remark {
+            margin-top: 20px;
+            p {
+              font-size: 16px;
+              line-height: 30px;
+              color: #444444;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .secondPage {
+    padding: 58px 0 0;
+    height: 100vh;
+    background: url(../../../../static/icon/4.png) no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+    img {
+      width: 70%;
+    }
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      position: inherit;
+      height: 100%;
+
+      .table {
+        width: 100%;
+        height: auto;
+        position: inherit;
+        margin: 0;
+        .title {
+          font-size: 23px;
+          font-weight: 600;
+          margin: 30px 0;
+          color: #444444;
+        }
+        .img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+</style>
+
+

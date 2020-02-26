@@ -1,0 +1,866 @@
+<style lang="less" scoped>
+.aboutus {
+  padding-top: 58px;
+  .background {
+    background: url(../../../static/icon/98.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 390px;
+    display: table;
+    width: 100%;
+  }
+  .bccolor {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+  }
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    .abstract {
+      margin-top: -161px;
+      padding: 59px 85px 81px 85px;
+      background: rgba(157, 205, 57, 0.8);
+      margin-bottom: 60px;
+      .remark {
+        text-align: left;
+        text-indent: 2em;
+        font-size: 16px;
+        line-height: 30px;
+        color: #ffffff;
+      }
+    }
+    .mainbox {
+      margin: 0 0 60px;
+      & > div {
+        display: inline-block;
+        vertical-align: top;
+        width: 500px;
+        &.img {
+          text-align: right;
+          margin-right: 100px;
+          img {
+            display: inline-block;
+            width: 362px;
+          }
+        }
+        &.text {
+          text-align: left;
+          margin-left: 40px;
+          .title {
+            margin-bottom: 30px;
+            span {
+              font-size: 40px;
+              color: #333333;
+              font-style: normal;
+              &:nth-child(2) {
+                font-size: 30px;
+                line-height: 36px;
+                color: #333333;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+        .remark {
+          line-height: 30px;
+          font-size: 18px;
+          padding: 0 100px 0 0;
+        }
+      }
+    }
+  }
+  .growth {
+    padding: 60px 0;
+    background: url(../../../static/icon/83.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: table;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    .changebox {
+      text-align: left;
+      p {
+        cursor: pointer;
+        text-align: center;
+        margin: 0 10px 70px;
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: #ffffff;
+        line-height: 50px;
+        color: #84c108;
+        &.active {
+          background-color: #84c108;
+          color: #fff;
+        }
+      }
+    }
+    .itemCon {
+      display: flex;
+      padding: 0 50px;
+      & > div {
+        flex: 1;
+      }
+      img {
+        width: 470px;
+        height: 330px;
+      }
+      .year {
+        color: #fff;
+        
+        
+      }
+      .remark {
+        text-align: left;
+        padding: 0 10px;
+        color: #fff;
+        margin-top: 20px;
+      }
+    }
+  }
+  .culture {
+    padding: 60px 0;
+    .list {
+      // display: flex;
+      margin-bottom: 100px;
+      justify-content: space-between;
+      cursor: pointer;
+      .item {
+        display: inline-block;
+        width: 340px;
+        position: relative;
+        margin: 10px;
+        img {
+          width: 340px;
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+        }
+        .hover {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          .title {
+            padding: 0 40px;
+            line-height: 120px;
+            font-size: 20px;
+            color: #ffffff;
+            font-style: normal;
+            background: url(../../../static/icon/89.png) no-repeat;
+            background-position: center bottom;
+            margin-bottom: 35px;
+          }
+          .remark {
+            display: inline-block;
+            width: 120px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #fff;
+            &.other {
+              padding: 0 40px;
+              font-size: 16px;
+              
+              text-align: left;
+              width: auto;
+              line-height: 30px;
+            }
+          }
+          &.activeHover {
+            display: inline-block;
+            border-radius: 10px;
+
+            background-color: rgba(132, 193, 8, 0.9);
+          }
+        }
+      }
+    }
+    .picType {
+      margin-bottom: 50px;
+      .item {
+        margin: 0 20px;
+        cursor: pointer;
+        font-size: 26px;
+        color: #333333;
+        &.active {
+          font-size: 26px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30px;
+          letter-spacing: 0px;
+          color: #84c108;
+          border-bottom: 1px solid #84c108;
+        }
+      }
+    }
+    .box {
+      display: inline-block;
+      width: 1000px;
+      .contains {
+        width: 500px;
+        height: 327px;
+        img{
+          width:100%;
+        }
+      }
+    }
+  }
+
+  .family {
+    padding: 60px 0;
+    background: #f2f2f2;
+  }
+
+  .model {
+    .title {
+      font-family: BaskOldFace;
+      font-size: 50px;
+      font-weight: normal;
+      font-style: italic;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #cccccc;
+    }
+    .chinese {
+      display: inline-flex;
+      width: 500px;
+      align-items: center;
+      margin: 0 0 50px;
+      span {
+        flex: 1;
+        border-bottom: 1px solid #d9d9d9;
+        &:nth-child(2) {
+          flex: inherit;
+          width: 160px;
+          border-bottom: none;
+          font-size: 40px;
+          line-height: 40px;
+          color: #ffffff;
+          margin: 0 20px;
+          &.back {
+            color: #010101;
+          }
+        }
+      }
+    }
+  }
+  .where {
+    padding: 60px 0;
+    margin-bottom: 100px;
+    .maps {
+      img {
+        width: 100%;
+        &:hover {
+          transition: all 2s;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutus {
+    padding-top: 58px;
+    .background {
+      height: 191px;
+      background: url(../../../static/icon/104.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .bccolor {
+      background-color: #fff;
+      padding-bottom: 50px;
+      padding: 10px 0;
+    }
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      .abstract {
+        margin-top: 0;
+        padding: 22px 15px 50px;
+        margin-bottom: 0px;
+        background: rgba(0, 0, 0, 0);
+        .remark {
+          font-size: 13px;
+          color: #747474;
+          line-height: 30px;
+        }
+      }
+      .mainbox {
+        border: solid 1px #eeeeee;
+        margin: 10px;
+        display: flex;
+        & > div {
+          display: inline-block;
+          vertical-align: top;
+          width: auto;
+          &.img {
+            text-align: right;
+            margin-right: 10px;
+            img {
+              display: inline-block;
+              width: 100px;
+            }
+          }
+          &.text {
+            text-align: left;
+            margin-left: 10px;
+            .title {
+              margin-bottom: 0;
+              span {
+                font-style: normal;
+                font-size: 15px;
+                color: #84c108;
+                &:nth-child(2) {
+                  margin-left: 10px;
+
+                  line-height: 20px;
+                  font-size: 11px;
+                  color: #747474;
+                }
+              }
+            }
+            .remarks {
+              height: 70px;
+              overflow: hidden;
+              position: relative;
+             
+            .detail{
+            
+            	font-size: 8px;
+	            color: #84c108;
+	           text-align: right;
+	         
+	            margin-top: -15px;
+            }
+              
+              .more {
+                position: absolute;
+                bottom: 1px;
+                right: 12px;
+                width: 52px;
+                height: 11px;
+              }
+            }
+            .remark {
+     
+              width: 90%;
+              font-size: 9px;
+              line-height: 14px;
+              color: #747474;
+              padding: 0 10px 0 0;
+              &:last-child {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .growth {
+      background: #fff;
+      background-position: center center;
+      background-size: cover;
+      display: table;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      padding: 20px 0;
+      .min_pic {
+        width: 80%;
+      }
+    }
+    .culture {
+      padding: 10px 0;
+      .list {
+        // display: flex;
+        margin-bottom: 100px;
+        margin: 10px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        cursor: pointer;
+        .item {
+          display: none;
+        }
+      }
+    }
+
+    .family {
+      padding: 10px 0;
+      display: none;
+    }
+
+    .where {
+      margin-bottom: 50px;
+      padding: 10px 0;
+      .maps {
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    .model {
+      .min_pic {
+        width: 90%;
+      }
+      .title {
+        font-size: 15px;
+        color: #a1a1a1;
+        font-style: normal;
+        margin-bottom: 19px;
+      }
+      .chinese {
+        display: inline-flex;
+        width: auto;
+        align-items: center;
+        margin: 0;
+
+        font-size: 15px;
+        font-weight: 600;
+        color: #2b2b2b;
+
+        span {
+          flex: 1;
+          font-size: 15px;
+          color: #2b2b2b;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+</style>
+
+<template>
+  <div class="aboutus">
+    <div class="background"></div>
+    <div
+      class="container"
+      id="1"
+    >
+      <div class="abstract model">
+        <div v-if="$store.state.user.tempData.screenWidth>=800">
+          <p class="title">COMPANY PROFILE</p>
+          <p class="chinese"><span></span><span>公司简介</span><span></span> </p>
+        </div>
+        <div v-if="$store.state.user.tempData.screenWidth<800">
+          <p class="chinese"><span>公司简介</span> </p>
+          <p class="title">COMPANY PROFILE</p>
+        </div>
+        <p class="remark">江西君风科技有限公司正式创建于2018年9月7日，总部设于南昌，是由江西君和软件技术有限公司与江西省锦峰投资管理有限责任公司共同投资成立的一家互联网科技产品企业，专注于新零售行业生态及互联网大数据应用。在微服务架构、SOA及大数据等领域有着雄厚的技术积累，拥有先进的全生命周期产品管理方法论，致力于成为新零售行业生态专家，为零售行业的“互联网+”信息化发展注入互联网产品基因，紧跟时代，共享未来。</p>
+        <p class="remark"> 截止2019年1月公司已有人员近40人，其中高管团队均来自于IBM、达华智能等知名国内外企业管理层，拥有丰富的软件及互联网产品企业管理经验以及资本运作的成功案例。我们欢迎心有理想，有激情的你加入，与整个团队一起同呼吸共命运。</p>
+      </div>
+    </div>
+    <div
+      class="bccolor"
+      id="2"
+    >
+      <div class="container ">
+        <div class="team model">
+          <div v-if="$store.state.user.tempData.screenWidth>=800">
+            <p class="title">MANAGEMENT TEAM</p>
+            <p class="chinese"><span></span><span class="back">管理团队</span><span></span> </p>
+          </div>
+          <div v-if="$store.state.user.tempData.screenWidth<800">
+            <p class="chinese"><span class="back">管理团队</span> </p>
+            <p class="title">MANAGEMENT TEAM</p>
+          </div>
+          <div>
+            <div
+              class="mainbox"
+              v-for="(item,index) in params.list"
+              :key="index"
+            >
+              <div class="img">
+                <img
+                  v-if="$store.state.user.tempData.screenWidth>=800"
+                  :src="'./static/icon/'+(80+index)+'.png'"
+                >
+                <img
+                  v-if="$store.state.user.tempData.screenWidth<800"
+                  :src="'./static/icon/'+(77+index)+'.png'"
+                >
+              </div>
+              <div class="text">
+                <p class="title"><span>{{item.name}}</span><span>{{item.position}}</span></p>
+                <div v-if="$store.state.user.tempData.screenWidth>=800">
+                  <p
+                    class="remark"
+                    v-for="(items,indexs) in params.list[index].honer"
+                    :key="indexs"
+                  >{{items}}</p>
+                </div>
+                <div 
+                  v-if="$store.state.user.tempData.screenWidth<800"
+                  ref="remarks"
+                  class="remarks"
+                >
+                 <div>
+                  <p style=" line-height: 18px;"
+                    class="remark"
+                    v-for="(items,indexs) in params.listMin[index].honer"
+                    :key="indexs"
+                  >{{items}}</p>
+                  </div>
+                <div class="detail" @click="routeTo(index)">
+                	查看详情
+                </div>
+                </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="growth"
+      id="3"
+    >
+      <div class="container model">
+
+        <div v-if="$store.state.user.tempData.screenWidth>=800">
+          <p class="title">GROWTH COURSE</p>
+          <p class="chinese"><span></span><span>成长历程</span><span></span> </p>
+        </div>
+        <div v-if="$store.state.user.tempData.screenWidth<800">
+          <p class="chinese"><span>成长历程</span> </p>
+          <p class="title">GROWTH COURSE</p>
+        </div>
+        <div
+          class="changebox"
+          v-if="$store.state.user.tempData.screenWidth>=800"
+        >
+          <p
+            v-for="(item,index) in params.history"
+            :key="index"
+            :class="{'active':params.initial==index}"
+            @click="changeInitial(index)"
+          >{{item.year}}</p>
+        </div>
+        <div
+          class="block"
+          v-if="$store.state.user.tempData.screenWidth>=800"
+        >
+          <el-carousel
+          ref="carousel"
+            trigger="click"
+            arrow="always"
+            height="400px"
+            :initial-index="params.initial"
+            indicator-position="none"
+            @change="changeData"
+          >
+            <el-carousel-item
+              v-for="(item,index) in params.history"
+              :key="index"
+            >
+              <div class="itemCon">
+                <div class="img"><img :src="'./static/icon/'+(84+index)+'.png'"></div>
+                <div>
+                  <p class="remark" style="font-size: 22px;text-align: center;">{{item.year}}</p>
+                  <p
+                    class="remark"
+                    v-for="(items,indexs) in params.history[index].remark"
+                    :key="indexs"
+                  >{{items}}</p>
+                </div>
+              </div>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+        <img
+          v-if="$store.state.user.tempData.screenWidth<800"
+          class="min_pic"
+          src="../../../static/icon/105.png"
+          alt=""
+          srcset=""
+        >
+      </div>
+    </div>
+    <div
+      class="culture"
+      id="4"
+    >
+      <div class="container model">
+
+        <div v-if="$store.state.user.tempData.screenWidth>=800">
+          <p class="title">CORPORATE CULTURE</p>
+          <p class="chinese"><span></span><span class="back">企业文化</span><span></span> </p>
+        </div>
+        <div v-if="$store.state.user.tempData.screenWidth<800">
+          <p class="chinese"><span class="back">企业文化</span> </p>
+          <p class="title">CORPORATE CULTURE</p>
+        </div>
+        <img
+          v-if="$store.state.user.tempData.screenWidth<800"
+          class="min_pic"
+          src="../../../static/icon/110.png"
+        >
+        <div class="list">
+          <div
+            v-on:mouseenter="mouseOverOut(index)"
+            v-on:mouseleave="mouseOverOut('-1')"
+            class="item"
+            v-for="(item,index) in params.culture"
+            :key="index"
+          >
+            <img :src="'./static/icon/'+(86+index)+'.png'">
+            <div
+              class="hover"
+              :class="{'activeHover':params.mouseoverIndex == index}"
+            >
+              <p class="title">{{item.title}}</p>
+              <p><span
+                  class="remark"
+                  :class="{'other':index == 0 && indexs == 0}"
+                  v-for="(items,indexs) in params.culture[index].remark"
+                  :key="indexs"
+                >{{items}}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="picType" v-if="$store.state.user.tempData.screenWidth>=800">
+          <span
+            class="item"
+            :class="{'active':index == params.changeImgIndex}"
+            @click="changeImg(index)"
+            v-for="(item,index) in params.picture"
+            :key="index"
+          >{{item.name}}</span>
+        </div>
+        <div class="box" v-if="$store.state.user.tempData.screenWidth>=800">
+          <el-carousel
+            :interval="4000"
+            type="card"
+            height="300px"
+          >
+            <el-carousel-item
+              v-for="(item,index) in params.picture[params.changeImgIndex].length"
+              :key="index"
+            >
+              <img
+                class="contains"
+                :src="'./static/icon/B'+String(params.changeImgIndex)+index+'.png'"
+              >
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+      </div>
+    </div>
+    <!-- <div
+      class="family"
+      id="5"
+    >
+      <div class="container model">
+        <p class="title">WE ARE FAMILY</p>
+        <p class="chinese"><span></span><span class="back">人在君风</span><span></span></p>
+
+      </div>
+    </div> -->
+    <!-- <div
+      class="where"
+      id="6"
+    >
+      <div class="container model">
+        <div v-if="$store.state.user.tempData.screenWidth>=800">
+          <p class="title">WHERE ARE WE</p>
+          <p class="chinese"><span></span><span class="back">我们在哪</span><span></span> </p>
+        </div>
+        <div v-if="$store.state.user.tempData.screenWidth<800">
+          <p class="chinese"><span class="back">我们在哪</span> </p>
+          <p class="title">WHERE ARE WE</p>
+        </div>
+        <div class="maps">
+          <img
+            src="../../../static/icon/7.png"
+            alt=""
+            srcset=""
+          >
+        </div>
+      </div>
+    </div> -->
+  </div>
+</template>
+
+
+
+<script>
+import http from "@/utils/http.js";
+export default {
+  data() {
+    return {
+      params: {
+        changeImgIndex: 0,
+        mouseoverIndex: "-1",
+        initial: 0,
+        picture: [
+          { name: "君风环境", length: 6 },
+          { name: "君风生活", length: 5 },
+          { name: "旅游日记", length: 3 }
+        ],
+        culture: [
+          {
+            title: "品牌起源",
+            remark: [
+              "君风出自《论语·颜渊篇》，“君子之德风”代表的其实是企业和员工的价值取向，君风致力于在团队内部培育开放透明的沟通文化、寻求和建立目标导向和自我驱动型成员和团队，使人才的价值得到最大化体现，使团队的创新和凝聚力不断提升。"
+            ]
+          },
+          {
+            title: "核心价值观",
+            remark: ["创新", "诚信", "赋能", "协作", "专业", "激情"]
+          },
+          {
+            title: "团队的做事方式",
+            remark: [
+              "简单",
+              "信任",
+              "注重承诺",
+              "拥抱变化",
+              "群策群力",
+              "共同成长",
+              "和而不同"
+            ]
+          }
+        ],
+        history: [
+          {
+            year: "2018年",
+            remark: ["2018年9月7日江西君风科技有限公司注册成立;2018年12月31日止，团队实现从1到36人的突破。"],
+        
+            
+          },
+          {
+            year: "2019年",
+            remark: ["2019年开始精彩待续；"]
+          }
+        ],
+        list: [
+          {
+            name: "刘伟纲",
+            position: "总经理",
+            honer: [
+              "连续创业者，毕业于复旦大学;",
+              "曾任职IBM大中华区高管；",
+              "深圳希之光科技公司创始人、总经理；",
+              "深圳嘟嘟牛科技创始人、董事；",
+              "深圳云高信息股份创始人、董事；",
+              "江西优码创达公司董事、江西君和软件创始人、董事；",
+              "江西君风科技创始人、总经理，并参与投资了多家高新企业、互联网企业等，以及上市公司产业投资及并购。"
+            ]
+          },
+          {
+            name: "张伟春",
+            position: "副总经理",
+            honer: [
+              " 毕业于华南理工大学；",
+              "15年IT行业工作经验，超过8年的团队管理经验, 超过3年的企业IT管理咨询领域工作经验，超过10年的项目实施管理经验；",
+              "曾任职世界知名外企，全球技术服务解决方案专家、华南区技术总监；",
+              "广州麦青信息技术有限公司 创始人；",
+              "2018年9月正式成为君风创始团队成员之一；"
+            ]
+          },
+          {
+            name: "林振荣",
+            position: "技术顾问",
+            honer: [
+              "南昌大学计算机系副教授、硕士生导师、江西省科技项目评审专家，主要研究方向为WEB信息安全、大数据行业应用、数据挖掘等。在微服务、容器、中台等领域有显著成果并实际运用于项目研发。",
+              "管理及负责的部分项目：国家软件与信息服务公共支撑平台项目；江西省公安厅审计系统；江西省工信委新产品登记系统;江西省财政运维大数据分析平台；南昌市人社SOA综合管理平台等；"
+            ]
+          }
+        ],
+          listMin: [
+          {
+            name: "刘伟纲",
+            position: "总经理",
+            honer: [
+              "连续创业者，毕业于复旦大学;",
+              "曾任职IBM大中华区高管；",
+              "深圳希之光科技公司创始人、总经理；",
+              "深圳嘟嘟牛科技创始人、董事；...",
+            ],
+           
+          },
+          {
+            name: "张伟春",
+            position: "副总经理",
+            honer: [
+              " 毕业于华南理工大学；",
+              "15年IT行业工作经验，超过8年的团队管",
+               "理经验, 超过3年的企业IT管理咨询领域",
+              "工作经验，超过10年的项目实施...",
+
+            ],
+           
+          },
+          {
+            name: "林振荣",
+            position: "技术顾问",
+            honer: [
+              "南昌大学计算机系副教授、硕士生导",
+             " 师、江西省科技项目评审专家，主要研",
+              "究方向为WEB信息安全、大数据行业应",
+              "用、数据挖掘等。在微服务、容器..."
+            ],
+           
+          }
+        ],
+      }
+    };
+  },
+  methods: {
+  	routeTo(index){
+  		  
+  			let _self = this;
+  			//console.log(index)
+				let url ="/detail?index="+index
+				_self.$router.push(url)
+  	},
+    changeImg(index) {
+      this.params.changeImgIndex = index;
+    },
+    changeInitial(index) {
+      this.$refs.carousel.setActiveItem(index)
+    },
+    mouseOverOut(index) {
+      let _self = this;
+      if (_self.$store.state.user.tempData.screenWidth >= 800) {
+        _self.params.mouseoverIndex = index;
+      }
+    },
+    changeData(index) {
+      let _self = this;
+      // console.log(index);
+      _self.params.initial = index;
+    },
+    returnTop: function(id) {
+      let _self = this;
+
+      setTimeout(function() {
+        let height = document.getElementById(id).offsetTop;
+        document.documentElement.scrollTop = height - 50;
+        document.body.scrollTop = height - 50;
+      }, 0);
+    }
+  },
+  created() {
+    let _self = this;
+    http.$on("scrollTop", function(id) {
+      if (id > 0) {
+        _self.returnTop(id);
+      }
+    });
+    if (_self.$route.query.id > 0) {
+      _self.returnTop(_self.$route.query.id);
+    }
+  }
+};
+</script>
+

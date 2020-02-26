@@ -1,0 +1,177 @@
+[
+    {
+        "name": "首页",
+        "en": "Home",
+        "limits": 0,
+        "path": "/dashboard",
+        "children": []
+    },
+    {
+        "name": "产品中心",
+        "en": "Products",
+        "limits": 0,
+        "path": "/frontDesk",
+        "children": [
+            {
+                "name": "'薄'前台",
+                "limits": 0,
+                "path": "/frontDesk",
+                "children": [
+                    {
+                        "name": "消费者小程序",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 1
+                    },
+                    {
+                        "name": "商家助手",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 2
+                    },
+                    {
+                        "name": "积分商城",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 3
+                    },
+                    {
+                        "name": "智能收银系统",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 4
+                    },
+                    {
+                        "name": "运营管理平台",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 5
+                    },
+                    {
+                        "name": "数据统计中心",
+                        "limits": 0,
+                        "path": "/frontDesk",
+                        "id": 6
+                    }
+                ]
+            },
+            {
+                "name": "'厚'中台",
+                "limits": 0,
+                "path": "/middleground",
+                "children": [
+                    {
+                        "name": "业务中台",
+                        "limits": 0,
+                        "path": "/middleground",
+                        "id": 1
+                    },
+                    {
+                        "name": "数据中台",
+                        "limits": 0,
+                        "path": "/middleground",
+                        "id": 2
+                    }
+                ]
+            },
+            {
+                "name": "'强'后台",
+                "limits": 0,
+                "path": "/background",
+                "children": [
+                    {
+                        "name": "ERP综合管理平台",
+                        "limits": 0,
+                        "path": "/background",
+                        "id": 1
+                    },
+                    {
+                        "name": "货源共享平台",
+                        "limits": 0,
+                        "path": "/background",
+                        "id": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "解决方案",
+        "en": "Softsolution",
+        "limits": 0,
+        "path": "/storesWisdom",
+        "children": [
+            {
+                "name": "智慧门店解决方案",
+                "limits": 0,
+                "path": "/storesWisdom",
+                "children": []
+            },
+            {
+                "name": "中台解决方案",
+                "limits": 0,
+                "path": "/courtMiddle",
+                "children": []
+            },
+            {
+                "name": "供应链解决方案",
+                "limits": 0,
+                "path": "/chainSupply",
+                "children": []
+            },
+            {
+                "name": "大数据解决方案",
+                "limits": 0,
+                "path": "/dataBig",
+                "children": []
+            }
+        ]
+    },
+    {
+        "name": "关于我们",
+        "en": "Aboutus",
+        "limits": 0,
+        "path": "/aboutus",
+        "children": [
+            {
+                "name": "企业介绍",
+                "limits": 0,
+                "path": "/aboutus",
+                "children": [],
+                "id": 1
+            },
+            {
+                "name": "管理团队",
+                "limits": 0,
+                "path": "/aboutus",
+                "children": [],
+                "id": 2
+            },
+            {
+                "name": "成长历程",
+                "limits": 0,
+                "path": "/aboutus",
+                "children": [],
+                "id": 3
+            },
+            {
+                "name": "企业文化",
+                "limits": 0,
+                "path": "/aboutus",
+                "children": [],
+                "id": 4
+            },
+           
+            {
+                "name": "加入我们",
+                "limits": 0,
+                "path": "/job",
+                "children": [],
+                "id": 6
+            }
+            
+        ]
+    }
+]
+
+

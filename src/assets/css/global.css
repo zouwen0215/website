@@ -1,0 +1,28 @@
+#app>div{
+    background-color: #fff;
+}
+
+/* .minImg{
+    width: 80%;
+  } */
+
+
+.public_contian{
+    width: 1200px;
+    margin: 0 auto;
+}
+img{
+    max-width: 1200px;
+}
+
+.swiper-pagination-bullet {
+    width: 2px;
+    height: 28px;
+    border-radius: 0;
+    background-color: #84C108;
+}
+
+*{
+    -webkit-box-pack: justify; 
+  -webkit-box-align: center;
+  }

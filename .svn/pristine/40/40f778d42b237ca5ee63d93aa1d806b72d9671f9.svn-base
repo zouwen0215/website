@@ -1,0 +1,254 @@
+<style lang="less" scoped>
+
+
+.storesWisdom {
+  padding-top: 58px;
+  .background {
+    background: url(../../../static/icon/47.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 390px;
+    text-align: left;
+    .contain {
+      padding-top: 140px;
+      width: 700px;
+      text-align: center;
+      p:nth-child(1) {
+        font-size: 40px;
+        // line-height: 80px;
+        letter-spacing: 4px;
+        color: #ffffff;
+      }
+      p:nth-child(2) {
+        font-size: 22px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        color: #ffffff;
+      }
+    }
+  }
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 150px;
+    .img {
+      display: flex;
+      align-items: center;
+      img {
+        width: 467px;
+        &.vs {
+          width: 260px;
+          height: 179px;
+        }
+      }
+    }
+    .title {
+      padding-top: 50px;
+      font-size: 36px;
+      line-height: 30px;
+      color: #444444;
+      &.minTile {
+        font-size: 28px;
+        margin-bottom: 80px;
+      }
+    }
+    .remark {
+      font-size: 18px;
+      line-height: 30px;
+      margin: 40px 0;
+      color: #444444;
+    }
+    .border {
+      margin-top: 50px;
+      border-bottom: 1px dashed #dfdfdf;
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1170px;
+      .listItem {
+        width: 50%;
+            margin-bottom: 60px;
+        display: flex;
+        img {
+          width: 278px;
+          margin-right: 36px;
+        }
+        .itemright {
+          text-align: left;
+          .listTitle {
+            font-size: 28px;
+            line-height: 58px;
+            color: #84c108;
+          }
+          .other {
+            font-size: 18px;
+            line-height: 26px;
+            color: #444444;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .storesWisdom {
+     padding-top: 58px;
+     .background {
+       background: url(../../../static/icon/9.png) no-repeat;
+       background-size: 100% 100%;
+      height: 191px;
+      .contain {
+      padding-top: 70px;
+      width: 400px;
+      text-align: center;
+      p:nth-child(1) {
+        font-size: 20px;
+        // line-height: 80px;
+        letter-spacing: 2px;
+        color: #ffffff;
+      }
+      p:nth-child(2) {
+        font-size: 11px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+    }
+    }
+    .container {
+      width: 100%;
+      margin: 0 ;
+      padding: 0 10px 50px;
+      .title {
+        padding-top:25px;
+        font-size: 18px;
+        line-height: 30px;
+        color: #444444;
+        &.minTile {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+      .img {
+      display: block;
+      img {
+        width: 80%;
+       margin-bottom: 30px;
+      }
+    }
+      img{
+        width: 90%;
+      }
+      .remark {
+        font-size: 9px;
+        line-height: 15px;
+        margin: 20px 0;
+        color: #444444;
+      }
+      .list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .listItem {
+        width: 50%;
+        margin-bottom: 20px;
+        text-align: center;
+        display: inline-block;
+        img {
+          width: 50%;
+          height: 80px;
+          margin-right:0;
+        }
+        .itemright {
+          width: 80%;
+          display: inline-block;
+          text-align: left;
+          .listTitle {
+            font-size: 14px;
+            line-height: 30px;
+            color: #84c108;
+          }
+          .other {
+            font-size: 9px;
+            line-height: 20px;
+            color: #444444;
+          }
+        }
+      }
+    }
+    }
+  }
+  
+}
+</style>
+
+
+<template>
+  <div class="storesWisdom">
+    <div class="background">
+      <div class="public_contian " v-if="$store.state.user.tempData.screenWidth>=800">
+        <div class="contain">
+          <p>智慧门店解决方案</p>
+          <p>客流数字化· 商品数字化 · 交易数字化 · 支付数字化 · 会员数字化</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <p class="title">智慧门店解决方案</p>
+      <p class="remark">增强用户购物体验，实现门店数字化，消费需求场景化</p>
+      <div class="img">
+        <img src="../../../static/icon/48.png">
+         <img class="vs" src="../../../static/icon/49.png" v-if="$store.state.user.tempData.screenWidth>=800">
+          <img src="../../../static/icon/50.png">
+      </div>
+      <p class="title minTile">方案特性</p>
+      <div class="list">
+        <div
+          class="listItem"
+          v-for="(item,index) in params.list"
+          :key="index"
+        >
+          <img :src="'./static/icon/'+(51+index)+'.png'">
+          <div class="itemright">
+            <p class="listTitle">{{item.name}}</p>
+            <p
+              class="other"
+              v-for="(items,indexs) in item.child"
+              :key="indexs"
+            >{{items}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      params: {
+        list: [
+          { name: "门店日常管理", child: ["店务管理", "经营数据", "订单推送"] },
+          {
+            name: "门店智能终端集成",
+            child: ["智能触屏", "客流标签", "会员识别", "电子价签", "其他硬件"]
+          },
+          { name: "数据统计分析", child: ["销售报表", "库存报表", "...."] },
+          { name: "外部设备对接", child: ["银联POS"] },
+          { name: "门店进销存", child: ["商品管理", "订单管理", "库存管理"] },
+          { name: "门店零售场景", child: ["线下场景", "线上场景", "门店促销"] },
+          { name: "门店会员管理", child: ["积分商城", "...."] }
+        ]
+      }
+    };
+  },
+  created() {}
+};
+</script>
+
+
